@@ -1,7 +1,5 @@
 import React from "react";
 import "./index.scss";
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Marquee from "react-fast-marquee";
 // Material Ints
