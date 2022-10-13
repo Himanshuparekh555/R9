@@ -45,7 +45,7 @@ const Header = ({}) => {
                 </Container>
             </header>
             <Box
-            className={isActive ? "overlay" : "overlay active"}
+            className={isActive ? "overlay_menu" : "overlay_menu active"}
             onClick={MenuToggleClass}
             ></Box>
         </>

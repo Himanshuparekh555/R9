@@ -3,6 +3,7 @@ import "./index.scss";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Marquee from "react-fast-marquee";
 // Material Ints
 import {
   Grid,
@@ -11,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const slideImages = [
+const OurTeamInfo = [
   {
     url: 'https://exesports-image-prod.s3.ap-south-1.amazonaws.com/prod/profile/1665630344462.png',
     name: 'Sagar Patel',
@@ -36,61 +37,40 @@ const slideImages = [
     subtitle:'VP Marketing at G&O',
     button:'Join us now'
   },
-];
-const responsiveSettings = [
-    {
-        breakpoint: 800,
-        settings: {
-            slidesToShow: 4,
-            slidesToScroll: 3,
-            centerPadding: 80
-        }
-    },
-    {
-        breakpoint: 500,
-        settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            centerPadding: 30
-        }
-    }
+  
 ];
 class OurTeam extends React.Component {   
     render() {
         return <>
-          <Box className="ourteam">
-                <Box sx={{ display: "flex", justifyContent:"center",mb:3 }}>
+          <Box className="ourteam" sx={{mb:15 }}>
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <Box sx={{ display: "flex", justifyContent:"center",mb:5 }}>
                     <Typography variant="h3" gutterBottom className="heading1">
                         {"Our Team"}
                     </Typography>
                 </Box>
-                <Grid container sx={{ display: "flex", alignItems: "center", justifyContent: "end",mb:20 }}>
-                  <Grid item xs={12} sm={12} md={10}>
-                  <Box className="slide-container" sx={{position:"relative"}}>
-                  <AnimationOnScroll animateIn="animate__fadeInRight">
-                  <Slide slidesToScroll={1} slidesToShow={2} arrows={false} indicators={false} responsive={responsiveSettings}>
-                  {slideImages.map((slideImage, index)=> (
-                      <Box className="each-slide" key={index} sx={{ ml:2,mr:2}}>
-                          <Box className="box" sx={{ display: "flex", justifyContent:"center",flexDirection:"column",p:2.5,borderRadius:9,position:"relative"}}>
-                            <img src={slideImage.url} alt=""/>
-                            <Box className="info" sx={{ display: "flex", justifyContent:"center",flexDirection:"column",mt:3}}>
-                              <Typography variant="h6" gutterBottom sx={{ mb:1}}>
-                                {slideImage.name}
-                              </Typography>
-                              <Typography variant="body1" gutterBottom>{slideImage.subtitle}</Typography>
-                              <Button className="btn-theme" variant="text" >{slideImage.button}</Button>
+                  <Box className="marquee-slide" sx={{position:"relative",mb:8}}>
+                    
+                    <Marquee pauseOnHover={true} speed={30} gradient={false} >
+                        {OurTeamInfo.map((OurTeam, index)=> (
+                              <Box className="box" key={index} sx={{ display: "flex", justifyContent:"center",flexDirection:"column",p:2.5,borderRadius:9,position:"relative",ml:3,mr:3}}>
+                                <Box sx={{ overflow:"hidden",borderRadius:5}}>
+                                  <img className="user_img w-100" src={OurTeam.url} alt=""/>
+                                </Box>
+                              <Box className="info" sx={{ display: "flex", justifyContent:"center",flexDirection:"column",mt:3}}>
+                                <Typography variant="h6" gutterBottom sx={{ mb:1}}>
+                                  {OurTeam.name}
+                                </Typography>
+                                <Typography variant="body1" gutterBottom>{OurTeam.subtitle}</Typography>                                
+                              </Box>
                             </Box>
-                          </Box>
-                      </Box>
-                    ))} 
-                  </Slide>
-                  <Box className="vector2" sx={{ position:"absolute"}}></Box>
-                  </AnimationOnScroll>
-                  <Box className="vector3" sx={{ position:"absolute",top:10,right:300}}></Box>
-                  
-                </Box>
-                  </Grid>
-                </Grid>                
+                        ))} 
+                    </Marquee>
+                    <Button className="btn-theme" variant="text" sx={{ position:"absolute"}}>{"Join us now"}</Button>
+                    <Box className="vector2" sx={{ position:"absolute"}}></Box>                    
+                  <Box className="vector3" sx={{ position:"absolute",top:10,right:100}}></Box>                 
+                </Box> 
+                </AnimationOnScroll>            
           </Box>
         </>;
       }
