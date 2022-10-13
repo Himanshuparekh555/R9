@@ -1,0 +1,67 @@
+@import "../src/variables.scss";
+
+/* Body */
+* {
+  margin : 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primary-font !important;
+}
+
+@media (min-width: 1200px) {
+  .MuiContainer-root {
+    max-width: 1140px !important;
+  }
+}
+
+a,
+button {
+  -webkit-transition: all 300ms ease-in-out 0s;
+  -moz-transition   : all 300ms ease-in-out 0s;
+  transition        : all 300ms ease-in-out 0s;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primary-font !important;
+}
+
+.heading1 {
+  font-size  : 36px !important;
+  font-weight: 500 !important;
+
+  @media (max-width: 600px) {
+    font-size: 32px !important;
+  }
+}
+
+.vector1 {
+  background-image: url("../src/images/vector1.svg");
+  background-size : 100%;
+  width           : 23px;
+  height          : 45px;
+}
+
+.vector2 {
+  background-image: url("../src/images/vector2.svg");
+  background-size : 100%;
+  width           : 32px;
+  height          : 70px;
+}
+
+.vector3 {
+  background-image: url("../src/images/vector3.svg");
+  background-size : 100%;
+  width           : 18px;
+  height          : 28px;
+}

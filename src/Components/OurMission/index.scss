@@ -1,0 +1,67 @@
+@import "../../../src/variables.scss";
+
+.ourmission {
+    padding : 100px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 570px) {
+        padding: 20px;
+    }
+
+    & .title {
+        font-size  : 48px;
+        line-height: 72px;
+        font-weight: 500;
+
+        @media (max-width: 600px) {
+            font-size  : 40px;
+            line-height: 50px;
+        }
+    }
+
+    & .des {
+        font-size: 16px;
+    }
+
+    & .cards {
+        position: relative;
+        z-index : 1;
+
+        &::after {
+            background-image: url("../../images/ddsw.png");
+            width           : 582px;
+            height          : 712px;
+            content         : "";
+            position        : absolute;
+            top             : 0;
+            bottom          : 0;
+            left            : -120px;
+            z-index         : -1;
+        }
+
+        & .box {
+            box-shadow        : 0px 3px 20px #0000000A;
+            -moz-box-shadow   : 0px 3px 20px #0000000A;
+            -webkit-box-shadow: 0px 3px 20px #0000000A;
+
+            & .icon {
+                background-color: $primary-color;
+                width           : 80px;
+                height          : 80px;
+            }
+
+            & .title {
+                font-size  : 22px;
+                font-weight: 500;
+                line-height: 33px;
+                font-family: $primary-font;
+            }
+
+            & .subtitle {
+                font-family: $primary-font;
+                font-size  : 14px;
+                color      : $gray-text--color;
+            }
+        }
+    }
+}

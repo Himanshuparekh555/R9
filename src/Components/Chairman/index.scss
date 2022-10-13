@@ -1,0 +1,43 @@
+@import "../../../src/variables.scss";
+
+.chairman {
+    & .title {
+        font-size  : 32px;
+        line-height: 48px;
+        font-weight: 500;
+
+        @media (max-width: 600px) {
+            font-size  : 28px;
+            line-height: 40px;
+        }
+    }
+
+    & .subtitle {
+        color      : $gray-text--color;
+        font-size  : 16px;
+        line-height: 25px;
+        font-weight: 400;
+    }
+
+    & .name_tag {
+        bottom: 60px;
+        left  : -60px;
+
+        @media only screen and (max-width: 600px) {
+            bottom: -15px;
+            left  : 15px;
+        }
+
+        & .user_name {
+            color                : $white-color;
+            background           : $primary-dark-color;
+            border-radius        : 40px 0px 40px 40px;
+            -webkit-border-radius: 40px 0px 40px 40px;
+            -moz-border-radius   : 40px 0px 40px 40px;
+            padding              : 15px 40px;
+            font-weight          : 500;
+        }
+    }
+
+    & .banner_img {}
+}
