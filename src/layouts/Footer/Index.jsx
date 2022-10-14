@@ -1,6 +1,11 @@
 import * as React from 'react';
 import "./index.scss";
-
+import {ReactComponent as MailIcon} from '../../images/mail.svg';
+import {ReactComponent as CallingIcon} from '../../images/calling.svg';
+import {ReactComponent as FacebookIcon} from '../../images/facebook_icon.svg';
+import {ReactComponent as TwitterIcon} from '../../images/twitter_icon.svg';
+import {ReactComponent as InstaIcon} from '../../images/instagram_icon.svg';
+import {ReactComponent as LocationIcon} from '../../images/location.svg';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 // Material Ints
 import {
@@ -15,12 +20,6 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 const Footer = ({}) => {
     const [value, setValue] = React.useState('1');
 
@@ -47,7 +46,7 @@ const Footer = ({}) => {
                                     </Box>
                                     <TabPanel value="1" sx={{  mt:3,mb:7 }}>
                                         <Box className='content' sx={{  textAlign:"center" }}>
-                                            <LocationOnIcon/>
+                                            <LocationIcon/>
                                             <Typography className='des' variant="body1" gutterBottom sx={{  textAlign:"center",mt:3 }}>
                                                 Bicholi Mardana Rd, Near Vidya Sagar <br/>College Pragati Vihar, Indore
                                             </Typography>
@@ -56,11 +55,11 @@ const Footer = ({}) => {
                                     <TabPanel value="2" sx={{  mt:3,mb:5 }}>
                                         <Grid className='content' container sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                                             <Grid className='number' item xs={12} sm={6} md={6} sx={{ display: "flex",flexDirection:"column", alignItems: "center",pl:2,pr:2,mb:3 }}>
-                                                <PhoneInTalkIcon/>
+                                                <CallingIcon/>
                                                 <Link sx={{mt:2}} color="inherit" underline="none" href="tel:+918827726999">{"+91 88277 26999"}</Link>
                                             </Grid>
                                             <Grid item xs={12} sm={6} md={6} sx={{ display: "flex",flexDirection:"column", alignItems: "center",pl:2,pr:2,mb:3 }}>
-                                                <EmailIcon/>
+                                                <MailIcon/>
                                                 <Link sx={{mt:2}} color="inherit" underline="none" href="mailto:r9foundation@email.com">{"r9foundation@email.com"}</Link>
                                             </Grid>
                                         </Grid>
@@ -74,9 +73,9 @@ const Footer = ({}) => {
                 <Container>
                     <Box className='copyright'>
                         <Box className='socialmedia' sx={{ display: "flex", justifyContent: "center",mb:4}}>
-                            <Link sx={{ml:1,mr:1}} color="inherit" underline="none" href="#"><InstagramIcon  sx={{ fontSize: 16 }}/></Link>
+                            <Link sx={{ml:1,mr:1}} color="inherit" underline="none" href="#"><InstaIcon  sx={{ fontSize: 16 }}/></Link>
                             <Link sx={{ml:1,mr:1}} color="inherit" underline="none" href="#"><TwitterIcon sx={{ fontSize: 16 }}/></Link>
-                            <Link sx={{ml:1,mr:1}} color="inherit" underline="none" href="#"><FacebookOutlinedIcon sx={{ fontSize: 16 }}/></Link>
+                            <Link sx={{ml:1,mr:1}} color="inherit" underline="none" href="#"><FacebookIcon sx={{ fontSize: 16 }}/></Link>
                         </Box>
                         <Typography variant="body1" gutterBottom sx={{  textAlign:"center"}}>
                             {"© 2022 R9 Foundation All Rights Reserved."}

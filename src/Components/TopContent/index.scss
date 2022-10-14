@@ -42,24 +42,26 @@
         }
     }
 
-    & .dots {
-        & span {
-            background-color     : $primary-color;
-            border-radius        : 100%;
-            -webkit-border-radius: 100%;
-            -moz-border-radius   : 100%;
-            display              : inline-block;
-            margin               : 0 4px;
 
-            &:first-child {
-                width : 24px;
-                height: 24px;
-            }
+}
 
-            &:last-child {
-                width : 12px;
-                height: 12px;
-            }
+.dots {
+    & span {
+        background-color     : $primary-color;
+        border-radius        : 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius   : 100%;
+        display              : inline-block;
+        margin               : 0 4px;
+
+        &:first-child {
+            width : 24px;
+            height: 24px;
+        }
+
+        &:last-child {
+            width : 12px;
+            height: 12px;
         }
     }
 }

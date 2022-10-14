@@ -1,0 +1,24 @@
+@import "../../../src/variables.scss";
+
+.aboutus {
+    background-color: $gray-color;
+}
+
+.about-content {
+    & .title {
+        font-size  : 100px;
+        font-weight: 700;
+    }
+
+    & p {
+        font-size  : 16px;
+        line-height: 25px;
+    }
+
+    & ul {
+        & li {
+            border-bottom: 1px solid #E5E5EA;
+            padding      : 80px 0;
+        }
+    }
+}

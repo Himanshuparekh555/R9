@@ -11,7 +11,7 @@ import foundationImg from "../../images/foundation-img.png";
 class TopContent extends React.Component {   
     render() {
         return <>
-          <Box className="top-content" sx={{ pt:5,pb:5}}>
+          <Box className="top-content" sx={{ pt:15,pb:5}}>
             <Container sx={{ mt:8,mb:8}}>
                 <Grid container sx={{ display: "flex", justifyContent:"center"}}>
                     <Grid item xs={12} sm={12} md={6} sx={{ mb:4}}>

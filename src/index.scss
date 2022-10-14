@@ -16,6 +16,11 @@ body {
   }
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 a,
 button {
   -webkit-transition: all 300ms ease-in-out 0s;
@@ -39,6 +44,33 @@ h6 {
 .heading1 {
   font-size  : 36px !important;
   font-weight: 500 !important;
+
+  @media (max-width: 600px) {
+    font-size: 32px !important;
+  }
+}
+
+.heading2 {
+  font-size  : 36px !important;
+  font-weight: 600 !important;
+
+  @media (max-width: 600px) {
+    font-size: 32px !important;
+  }
+}
+
+.heading3 {
+  font-size  : 36px !important;
+  font-weight: 700 !important;
+
+  @media (max-width: 600px) {
+    font-size: 32px !important;
+  }
+}
+
+.heading4 {
+  font-size  : 30px !important;
+  font-weight: 700 !important;
 
   @media (max-width: 600px) {
     font-size: 32px !important;

@@ -82,10 +82,10 @@ const OurInitiatives = ({}) => {
                                         <Grid item xs={12} sm={6} md={7}>
                                             <Box className='content'>
                                                 <Typography variant="h4" gutterBottom className='title' sx={{ mb:3 }}>
-                                                {"Noise pollution free India"}
+                                                {"Fusce molestie odio neque"}
                                                 </Typography>
                                                 <Typography variant="subtitle2" gutterBottom className='subtitle' sx={{ mb:3 }}>
-                                                    {"Let’s play the universal music."}
+                                                    {"Suspendisse eleifend risus non justo porta."}
                                                 </Typography>
                                                 <List className='list'>
                                                     <ListItem>
@@ -112,7 +112,7 @@ const OurInitiatives = ({}) => {
                                         <Grid item xs={12} sm={6} md={7}>
                                             <Box className='content'>
                                                 <Typography variant="h4" gutterBottom className='title' sx={{ mb:3 }}>
-                                                {"Noise pollution free India"}
+                                                {"Donec convallis ultricies vulputate"}
                                                 </Typography>
                                                 <Typography variant="subtitle2" gutterBottom className='subtitle' sx={{ mb:3 }}>
                                                     {"Let’s play the universal music."}
